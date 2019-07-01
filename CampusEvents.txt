@@ -1,0 +1,9 @@
+Applicazione che fornisce eventi nelle vicinanze, basata sulla posizione.
+Input -> "Siri, cosa posso fare oggi"?
+OPutput -> "Ci sono questi eventi nelle vicinanze : (teatro, conferenze, serate...)"
+
+Tutto il fastidio di cercare eventi nelle vicinanze lo effettua l'app.
+
+Ampliabile con : 
+- Prenotazione di posti in quel determinato evento
+- Discussione tra le persone
