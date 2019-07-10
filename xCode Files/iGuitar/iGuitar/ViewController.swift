@@ -38,12 +38,11 @@ class ViewController: UIViewController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("Messaggio rivecuto")
         messageReceived = message["action"] as! String
-        print("Iphone - Messaggio ricevuto: \(messageReceived)")
+        DispatchQueue.main.async {
+            self.label.text = self.messageReceived
+        }
     }
     
-    @IBAction func bottone(_ sender: Any) {
-        label.text = "messageReceived"
-    }
     
 }
 
