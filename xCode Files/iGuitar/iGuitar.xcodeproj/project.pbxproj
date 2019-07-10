@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		088CEFDF22D6228200128CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CEFDE22D6228200128CF8 /* AppDelegate.swift */; };
+		088CEFE122D6228200128CF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CEFE022D6228200128CF8 /* ViewController.swift */; };
+		088CEFE422D6228200128CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFE222D6228200128CF8 /* Main.storyboard */; };
+		088CEFE622D6228200128CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFE522D6228200128CF8 /* Assets.xcassets */; };
+		088CEFE922D6228200128CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFE722D6228200128CF8 /* LaunchScreen.storyboard */; };
+		088CEFEE22D6228200128CF8 /* iGuitar WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 088CEFED22D6228200128CF8 /* iGuitar WatchKit App.app */; };
+		088CEFF422D6228200128CF8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFF222D6228200128CF8 /* Interface.storyboard */; };
+		088CEFF622D6228300128CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFF522D6228300128CF8 /* Assets.xcassets */; };
+		088CEFFD22D6228300128CF8 /* iGuitar WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 088CEFFC22D6228300128CF8 /* iGuitar WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		088CF00222D6228300128CF8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF00122D6228300128CF8 /* InterfaceController.swift */; };
+		088CF00422D6228300128CF8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF00322D6228300128CF8 /* ExtensionDelegate.swift */; };
+		088CF00622D6228300128CF8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF00522D6228300128CF8 /* NotificationController.swift */; };
+		088CF00822D6228300128CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088CF00722D6228300128CF8 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		088CEFEF22D6228200128CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 088CEFD322D6228200128CF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 088CEFEC22D6228200128CF8;
+			remoteInfo = "iGuitar WatchKit App";
+		};
+		088CEFFE22D6228300128CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 088CEFD322D6228200128CF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 088CEFFB22D6228300128CF8;
+			remoteInfo = "iGuitar WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		088CF01022D6228300128CF8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				088CEFFD22D6228300128CF8 /* iGuitar WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		088CF01422D6228300128CF8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				088CEFEE22D6228200128CF8 /* iGuitar WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		088CEFDB22D6228200128CF8 /* iGuitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGuitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		088CEFDE22D6228200128CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		088CEFE022D6228200128CF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		088CEFE322D6228200128CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		088CEFE522D6228200128CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		088CEFE822D6228200128CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		088CEFEA22D6228200128CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		088CEFED22D6228200128CF8 /* iGuitar WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iGuitar WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		088CEFF322D6228200128CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		088CEFF522D6228300128CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		088CEFF722D6228300128CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		088CEFFC22D6228300128CF8 /* iGuitar WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iGuitar WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		088CF00122D6228300128CF8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		088CF00322D6228300128CF8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		088CF00522D6228300128CF8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		088CF00722D6228300128CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		088CF00922D6228300128CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		088CF00A22D6228300128CF8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		088CEFD822D6228200128CF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		088CEFF922D6228300128CF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		088CEFD222D6228200128CF8 = {
+			isa = PBXGroup;
+			children = (
+				088CEFDD22D6228200128CF8 /* iGuitar */,
+				088CEFF122D6228200128CF8 /* iGuitar WatchKit App */,
+				088CF00022D6228300128CF8 /* iGuitar WatchKit Extension */,
+				088CEFDC22D6228200128CF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		088CEFDC22D6228200128CF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				088CEFDB22D6228200128CF8 /* iGuitar.app */,
+				088CEFED22D6228200128CF8 /* iGuitar WatchKit App.app */,
+				088CEFFC22D6228300128CF8 /* iGuitar WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		088CEFDD22D6228200128CF8 /* iGuitar */ = {
+			isa = PBXGroup;
+			children = (
+				088CEFDE22D6228200128CF8 /* AppDelegate.swift */,
+				088CEFE022D6228200128CF8 /* ViewController.swift */,
+				088CEFE222D6228200128CF8 /* Main.storyboard */,
+				088CEFE522D6228200128CF8 /* Assets.xcassets */,
+				088CEFE722D6228200128CF8 /* LaunchScreen.storyboard */,
+				088CEFEA22D6228200128CF8 /* Info.plist */,
+			);
+			path = iGuitar;
+			sourceTree = "<group>";
+		};
+		088CEFF122D6228200128CF8 /* iGuitar WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				088CEFF222D6228200128CF8 /* Interface.storyboard */,
+				088CEFF522D6228300128CF8 /* Assets.xcassets */,
+				088CEFF722D6228300128CF8 /* Info.plist */,
+			);
+			path = "iGuitar WatchKit App";
+			sourceTree = "<group>";
+		};
+		088CF00022D6228300128CF8 /* iGuitar WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				088CF00122D6228300128CF8 /* InterfaceController.swift */,
+				088CF00322D6228300128CF8 /* ExtensionDelegate.swift */,
+				088CF00522D6228300128CF8 /* NotificationController.swift */,
+				088CF00722D6228300128CF8 /* Assets.xcassets */,
+				088CF00922D6228300128CF8 /* Info.plist */,
+				088CF00A22D6228300128CF8 /* PushNotificationPayload.apns */,
+			);
+			path = "iGuitar WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		088CEFDA22D6228200128CF8 /* iGuitar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 088CF01522D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar" */;
+			buildPhases = (
+				088CEFD722D6228200128CF8 /* Sources */,
+				088CEFD822D6228200128CF8 /* Frameworks */,
+				088CEFD922D6228200128CF8 /* Resources */,
+				088CF01422D6228300128CF8 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				088CEFF022D6228200128CF8 /* PBXTargetDependency */,
+			);
+			name = iGuitar;
+			productName = iGuitar;
+			productReference = 088CEFDB22D6228200128CF8 /* iGuitar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		088CEFEC22D6228200128CF8 /* iGuitar WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 088CF01122D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar WatchKit App" */;
+			buildPhases = (
+				088CEFEB22D6228200128CF8 /* Resources */,
+				088CF01022D6228300128CF8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				088CEFFF22D6228300128CF8 /* PBXTargetDependency */,
+			);
+			name = "iGuitar WatchKit App";
+			productName = "iGuitar WatchKit App";
+			productReference = 088CEFED22D6228200128CF8 /* iGuitar WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		088CEFFB22D6228300128CF8 /* iGuitar WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 088CF00D22D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar WatchKit Extension" */;
+			buildPhases = (
+				088CEFF822D6228300128CF8 /* Sources */,
+				088CEFF922D6228300128CF8 /* Frameworks */,
+				088CEFFA22D6228300128CF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iGuitar WatchKit Extension";
+			productName = "iGuitar WatchKit Extension";
+			productReference = 088CEFFC22D6228300128CF8 /* iGuitar WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		088CEFD322D6228200128CF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Giuseppe De Simone";
+				TargetAttributes = {
+					088CEFDA22D6228200128CF8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					088CEFEC22D6228200128CF8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					088CEFFB22D6228300128CF8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 088CEFD622D6228200128CF8 /* Build configuration list for PBXProject "iGuitar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 088CEFD222D6228200128CF8;
+			productRefGroup = 088CEFDC22D6228200128CF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				088CEFDA22D6228200128CF8 /* iGuitar */,
+				088CEFEC22D6228200128CF8 /* iGuitar WatchKit App */,
+				088CEFFB22D6228300128CF8 /* iGuitar WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		088CEFD922D6228200128CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CEFE922D6228200128CF8 /* LaunchScreen.storyboard in Resources */,
+				088CEFE622D6228200128CF8 /* Assets.xcassets in Resources */,
+				088CEFE422D6228200128CF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		088CEFEB22D6228200128CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CEFF622D6228300128CF8 /* Assets.xcassets in Resources */,
+				088CEFF422D6228200128CF8 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		088CEFFA22D6228300128CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CF00822D6228300128CF8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		088CEFD722D6228200128CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CEFE122D6228200128CF8 /* ViewController.swift in Sources */,
+				088CEFDF22D6228200128CF8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		088CEFF822D6228300128CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088CF00622D6228300128CF8 /* NotificationController.swift in Sources */,
+				088CF00422D6228300128CF8 /* ExtensionDelegate.swift in Sources */,
+				088CF00222D6228300128CF8 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		088CEFF022D6228200128CF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 088CEFEC22D6228200128CF8 /* iGuitar WatchKit App */;
+			targetProxy = 088CEFEF22D6228200128CF8 /* PBXContainerItemProxy */;
+		};
+		088CEFFF22D6228300128CF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 088CEFFB22D6228300128CF8 /* iGuitar WatchKit Extension */;
+			targetProxy = 088CEFFE22D6228300128CF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		088CEFE222D6228200128CF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				088CEFE322D6228200128CF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		088CEFE722D6228200128CF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				088CEFE822D6228200128CF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		088CEFF222D6228200128CF8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				088CEFF322D6228200128CF8 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		088CF00B22D6228300128CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		088CF00C22D6228300128CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		088CF00E22D6228300128CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				INFOPLIST_FILE = "iGuitar WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		088CF00F22D6228300128CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				INFOPLIST_FILE = "iGuitar WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		088CF01222D6228300128CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				IBSC_MODULE = iGuitar_WatchKit_Extension;
+				INFOPLIST_FILE = "iGuitar WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		088CF01322D6228300128CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				IBSC_MODULE = iGuitar_WatchKit_Extension;
+				INFOPLIST_FILE = "iGuitar WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		088CF01622D6228300128CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				INFOPLIST_FILE = iGuitar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		088CF01722D6228300128CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL56J75A8R;
+				INFOPLIST_FILE = iGuitar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		088CEFD622D6228200128CF8 /* Build configuration list for PBXProject "iGuitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				088CF00B22D6228300128CF8 /* Debug */,
+				088CF00C22D6228300128CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		088CF00D22D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				088CF00E22D6228300128CF8 /* Debug */,
+				088CF00F22D6228300128CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		088CF01122D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				088CF01222D6228300128CF8 /* Debug */,
+				088CF01322D6228300128CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		088CF01522D6228300128CF8 /* Build configuration list for PBXNativeTarget "iGuitar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				088CF01622D6228300128CF8 /* Debug */,
+				088CF01722D6228300128CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 088CEFD322D6228200128CF8 /* Project object */;
+}
