@@ -15,12 +15,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     let session = WCSession.default
     var sessionStatus = WCSessionActivationState.notActivated
     var connectionStatus: Bool = false // Stato della connessione, se true può inviare messaggi
+    var action = false // Azione dell' utente
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("Connessione conclusa con successo")
+        print("Watch - Connessione conclusa con successo")
     }
     
-    var state = false
     
     func ckeckConnection(_ sessionStatus: WCSessionActivationState,_ session: WCSession) -> Bool{
         
@@ -28,11 +28,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         var reachable = false // Controlla che l'iphone sia sbloccato
         
         if sessionStatus == WCSessionActivationState.activated{
-            print("Connessione disponibile")
+            print("Watch - Connessione disponibile")
             stateConnection = true
         }
         else {
-            print("Connessione non disponibile")
+            print("Watch - Connessione non disponibile")
         }
         
         if stateConnection && session.isReachable {
@@ -49,10 +49,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func sendMessage(){
         if connectionStatus {
-            session.sendMessage(["state": state], replyHandler: nil, errorHandler: nil)
-        }
-        else {
-            print("Connessione non disponibile")
+            session.sendMessage(["state": action], replyHandler: nil, errorHandler: nil)
         }
     }
     
@@ -67,13 +64,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         if WCSession.isSupported() {
-            print("Conessione supportata")
+            print("Watch - Conessione supportata")
             session.delegate = self
             session.activate()
             sessionStatus = session.activationState
         }
         else {
-            print("Connessione non supportata")
+            print("Watch - Connessione non supportata")
         }
         
         connectionStatus = ckeckConnection(sessionStatus, session)
