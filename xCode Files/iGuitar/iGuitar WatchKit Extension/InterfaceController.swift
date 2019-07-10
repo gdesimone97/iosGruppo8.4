@@ -49,7 +49,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func sendMessage(){
         if connectionStatus {
-            session.sendMessage(["state": action], replyHandler: nil, errorHandler: nil)
+            print("Messaggio inviato")
+            session.sendMessage(["action": "action"], replyHandler: nil, errorHandler: nil)
+        }
+        else {
+            print("Messaggio non inviato")
         }
     }
     
@@ -77,6 +81,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
     }
     
+    @IBAction func button() {
+        sendMessage()
+    }
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()

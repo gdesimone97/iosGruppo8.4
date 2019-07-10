@@ -13,6 +13,7 @@ class SessionConnectivityIphone: NSObject, WCSessionDelegate {
     
     let session = WCSession.default
     var sessionStatus = WCSessionActivationState.notActivated // Stato della sessione
+    var messageReceived: Bool?
     
     override init() {
         super.init()
@@ -35,6 +36,8 @@ class SessionConnectivityIphone: NSObject, WCSessionDelegate {
     
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        // Da completare
+        messageReceived = message["action"] as! Bool
+        print("Iphone - Messaggio ricevuto")
+        print("Iphone - Messaggio ricevuto: \(messageReceived)")
     }
 }
