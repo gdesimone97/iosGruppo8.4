@@ -20,6 +20,7 @@
 		088CF00422D6228300128CF8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF00322D6228300128CF8 /* ExtensionDelegate.swift */; };
 		088CF00622D6228300128CF8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF00522D6228300128CF8 /* NotificationController.swift */; };
 		088CF00822D6228300128CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088CF00722D6228300128CF8 /* Assets.xcassets */; };
+		088CF01922D6247E00128CF8 /* SessionConnectivityIphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CF01822D6247E00128CF8 /* SessionConnectivityIphone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		088CF00722D6228300128CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		088CF00922D6228300128CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		088CF00A22D6228300128CF8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		088CF01822D6247E00128CF8 /* SessionConnectivityIphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionConnectivityIphone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				088CEFDE22D6228200128CF8 /* AppDelegate.swift */,
+				088CF01822D6247E00128CF8 /* SessionConnectivityIphone.swift */,
 				088CEFE022D6228200128CF8 /* ViewController.swift */,
 				088CEFE222D6228200128CF8 /* Main.storyboard */,
 				088CEFE522D6228200128CF8 /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 			files = (
 				088CEFE122D6228200128CF8 /* ViewController.swift in Sources */,
 				088CEFDF22D6228200128CF8 /* AppDelegate.swift in Sources */,
+				088CF01922D6247E00128CF8 /* SessionConnectivityIphone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
