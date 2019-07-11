@@ -15,7 +15,7 @@ import WatchKit
  These contexts can be used to enable application specific behavior.
  */
 protocol MotionManagerDelegate: class {
-    func updatedRead(pitch: Double, yaw: Double, sum: Double)
+    func updatedRead(sound: Bool)
 }
 
 class MotionManager {
@@ -24,21 +24,17 @@ class MotionManager {
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
     
-    var buffer_yaw = RunningBuffer(size: 50)
-    var buffer_pitch = RunningBuffer(size: 50)
+    var buffer = RunningBuffer(size: 50)
+//    var buffer_pitch = RunningBuffer(size: 50)
     
     var flag: Bool = false
     
     
     // MARK: Application Specific Constants
     
-    /*
-    // These constants were derived from data and should be further tuned for your needs.
-    let yawThreshold = 1.95 // Radians
-    let rateThreshold = 5.5 // Radians/sec
- 
-    let resetThreshold = 5.5 * 0.05 // To avoid double counting on the return swing.
-    */
+    let startThreshold = 1.00
+    let soundThreshold = 1.00
+    
     
     // The app is using 50hz data and the buffer is going to hold 1s worth of data.
     let sampleInterval = 1.0 / 50
@@ -72,7 +68,7 @@ class MotionManager {
                 let x = data.x
                 let z = data.z
                 
-                if(!self.flag && x > 1 && z < -1) {
+                if(!self.flag && x > self.startThreshold && z < -self.startThreshold) {
                     self.flag = true
                 }
                 
@@ -94,30 +90,23 @@ class MotionManager {
     func processDeviceMotion(_ deviceMotion: CMDeviceMotion) {
         let rotationRate = deviceMotion.rotationRate
         
-        let yaw = rotationRate.z
-        let pitch = rotationRate.x
-//        let sum = -rotationRate.x + rotationRate.z
+        let sum = -rotationRate.x + rotationRate.z
         
         
-        buffer_yaw.addSample(yaw)
-        buffer_pitch.addSample(pitch)
+        buffer.addSample(sum)
+//        buffer_pitch.addSample(pitch)
         
-        if !buffer_yaw.isFull() {
+        if !buffer.isFull() {
             return
         }
         flag = false
         
-        let yawMin = buffer_yaw.min()
-        let yawMax = buffer_yaw.max()
-        let yawAvg = buffer_yaw.sum()/50
-        let pitchMin = buffer_pitch.min()
-        let pitchMax = buffer_pitch.max()
-        let pitchAvg = buffer_pitch.sum()/50
+        let sumAvg = buffer.sum()/50
         
-        buffer_yaw.reset()
-        buffer_pitch.reset()
+        buffer.reset()
+//        buffer_pitch.reset()
         
-        delegate!.updatedRead(pitch: pitch, yaw: yaw, sum: sum)
+        delegate!.updatedRead(sound: sumAvg >= soundThreshold)
         
 //        print("yawMin: " + String(format: "%.3f", yawMin) + " yawMax: " + String(format: "%.3f", yawMax) + " yawAvg: " + String(format: "%.3f", yawAvg) + " - pitchMin: " + String(format: "%.3f", pitchMin) + " pitchMax: " + String(format: "%.3f", pitchMax) + " pitchAvg: " + String(format: "%.3f", pitchAvg))
        

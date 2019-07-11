@@ -14,8 +14,8 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
     
     var manager: MotionManager!
     
-    func updatedRead(pitch: Double, yaw: Double, sum: Double) {
-        
+    func updatedRead(sound: Bool) {
+        sendData()
     }
     
     @IBOutlet weak var label1: WKInterfaceLabel!
@@ -79,8 +79,7 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
         super.didDeactivate()
     }
 
-    
-    @IBAction func sendData() {
+    func sendData() {
         if session.activationState == WCSessionActivationState.activated{
             session.sendMessage(["payload": "1"], replyHandler: nil, errorHandler: nil)
         }
