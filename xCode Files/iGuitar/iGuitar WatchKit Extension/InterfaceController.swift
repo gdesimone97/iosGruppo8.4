@@ -10,50 +10,15 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class InterfaceController: WKInterfaceController {
     
-    @IBOutlet weak var stateLebel: WKInterfaceLabel!
-    let session = WCSession.default
-    var sessionStatus: WCSessionActivationState?
-    var connectionStatus: Bool = false // Stato della connessione, se true può inviare messaggi
+    private var session: SessionManager?
+    
+    
+    @IBOutlet weak var stateLabel: WKInterfaceLabel!
+    
+    // Stato della connessione, se true può inviare messaggi
     var action = false // Azione dell' utente
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if (activationState == WCSessionActivationState.activated){
-            print("Watch - Connessione attivata con successo")
-        }
-        else {
-            print("Watch - Connessione conclusa con successo")
-        }
-    }
-    
-    
-    func checkConnection(_ sessionStatus: WCSessionActivationState,_ session: WCSession) -> Bool{
-        
-        guard sessionStatus == WCSessionActivationState.activated else {
-            print("Watch - Connessione non disponibile")
-            return false
-        }
-        
-        guard session.isReachable else {
-            if  session.iOSDeviceNeedsUnlockAfterRebootForReachability {
-                print("Sblocca iphone")
-            }
-            return false
-        }
-        return true
-    }
-    
-    func sendMessage(){
-        
-        if checkConnection(sessionStatus!, session) {
-            print("Messaggio inviato")
-            session.sendMessage(["action": action], replyHandler: nil, errorHandler: nil)
-        }
-        else {
-            print("Messaggio non inviato")
-        }
-    }
     
     
     override func awake(withContext context: Any?) {
@@ -65,31 +30,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        stateLebel.setText("")
-        if WCSession.isSupported() {
-            print("Watch - Conessione supportata")
-            session.delegate = self
-            session.activate()
+        session = SessionManager()
+        if (session?.checkConnection())! {
+            stateLabel.setText("Connected")
+            stateLabel.setTextColor(UIColor.green)
         }
         else {
-            print("Watch - Connessione non supportata")
+            stateLabel.setText("Not connected")
+            stateLabel.setTextColor(UIColor.red)
         }
-        sleep(2)
-        sessionStatus = session.activationState
-        connectionStatus = checkConnection(sessionStatus!, session)
-        if connectionStatus {
-             stateLebel.setText("Connected")
-             stateLebel.setTextColor(UIColor.green)
-        }
-        else {
-            stateLebel.setText("Not connected")
-            stateLebel.setTextColor(UIColor.red)
-        }
-        
     }
     
     @IBAction func button() {
-        sendMessage()
+        session?.sendMessage(["action": action])
     }
     
     override func didDeactivate() {
@@ -98,15 +51,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     @IBAction func Connection() {
-        if WCSession.isSupported() {
-            session.delegate = self
-            session.activate()
-            sessionStatus = session.activationState
-            print("Status: ",sessionStatus! == WCSessionActivationState.activated)
-        }
-        else {
-            print("Watch - Connessione non supportata")
-        }
+        session = SessionManager()
     }
     
     

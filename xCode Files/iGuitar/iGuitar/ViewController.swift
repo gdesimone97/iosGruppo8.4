@@ -51,6 +51,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     @IBAction func reset(_ sender: Any) {
         count = 0
+        label.text = "start"
+        
     }
 }
 

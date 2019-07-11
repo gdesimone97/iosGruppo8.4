@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082ABD2622D767D700B5F6C6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082ABD2522D767D700B5F6C6 /* SessionManager.swift */; };
 		088CEFDF22D6228200128CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CEFDE22D6228200128CF8 /* AppDelegate.swift */; };
 		088CEFE122D6228200128CF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CEFE022D6228200128CF8 /* ViewController.swift */; };
 		088CEFE422D6228200128CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088CEFE222D6228200128CF8 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		082ABD2522D767D700B5F6C6 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		088CEFDB22D6228200128CF8 /* iGuitar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGuitar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088CEFDE22D6228200128CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		088CEFE022D6228200128CF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				088CF00722D6228300128CF8 /* Assets.xcassets */,
 				088CF00922D6228300128CF8 /* Info.plist */,
 				088CF00A22D6228300128CF8 /* PushNotificationPayload.apns */,
+				082ABD2522D767D700B5F6C6 /* SessionManager.swift */,
 			);
 			path = "iGuitar WatchKit Extension";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				088CF00622D6228300128CF8 /* NotificationController.swift in Sources */,
 				088CF00422D6228300128CF8 /* ExtensionDelegate.swift in Sources */,
+				082ABD2622D767D700B5F6C6 /* SessionManager.swift in Sources */,
 				088CF00222D6228300128CF8 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

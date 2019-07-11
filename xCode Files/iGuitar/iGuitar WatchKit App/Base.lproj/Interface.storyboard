@@ -27,7 +27,7 @@
                         <label width="136" alignment="left" text="Label" id="IiN-dK-B3O"/>
                     </items>
                     <connections>
-                        <outlet property="stateLebel" destination="IiN-dK-B3O" id="XjI-gp-fJo"/>
+                        <outlet property="stateLabel" destination="IiN-dK-B3O" id="81R-hw-F6K"/>
                     </connections>
                 </controller>
             </objects>
