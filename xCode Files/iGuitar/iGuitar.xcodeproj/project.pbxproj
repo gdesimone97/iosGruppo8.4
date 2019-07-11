@@ -470,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = "iGuitar WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = "iGuitar WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,7 +515,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				IBSC_MODULE = iGuitar_WatchKit_Extension;
 				INFOPLIST_FILE = "iGuitar WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp;
@@ -534,7 +534,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				IBSC_MODULE = iGuitar_WatchKit_Extension;
 				INFOPLIST_FILE = "iGuitar WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.gruppo4.iGuitar.watchkitapp;
@@ -552,7 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = iGuitar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL56J75A8R;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = iGuitar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
