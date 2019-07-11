@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		082ABD2A22D7822600B5F6C6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082ABD2922D7822600B5F6C6 /* SessionManager.swift */; };
+		082ABD2822D77EA400B5F6C6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082ABD2722D77EA400B5F6C6 /* SessionManager.swift */; };
 		ECFCEFD722D728A700CF9154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFCEFD622D728A700CF9154 /* AppDelegate.swift */; };
 		ECFCEFD922D728A700CF9154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFCEFD822D728A700CF9154 /* ViewController.swift */; };
 		ECFCEFDC22D728A700CF9154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFCEFDA22D728A700CF9154 /* Main.storyboard */; };
@@ -83,7 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		082ABD2922D7822600B5F6C6 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = "../../iGuitar/iGuitar WatchKit Extension/SessionManager.swift"; sourceTree = "<group>"; };
+		082ABD2722D77EA400B5F6C6 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		ECFCEFD322D728A700CF9154 /* LetsPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFCEFD622D728A700CF9154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFCEFD822D728A700CF9154 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		ECFCF00E22D728A800CF9154 /* LetsPlay WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				082ABD2922D7822600B5F6C6 /* SessionManager.swift */,
+				082ABD2722D77EA400B5F6C6 /* SessionManager.swift */,
 				ECFCF00F22D728A800CF9154 /* InterfaceController.swift */,
 				ECFCF01122D728A800CF9154 /* ExtensionDelegate.swift */,
 				ECFCF01322D728A800CF9154 /* NotificationController.swift */,
@@ -443,7 +443,7 @@
 			files = (
 				ECFCF01422D728A800CF9154 /* NotificationController.swift in Sources */,
 				ECFCF01222D728A800CF9154 /* ExtensionDelegate.swift in Sources */,
-				082ABD2A22D7822600B5F6C6 /* SessionManager.swift in Sources */,
+				082ABD2822D77EA400B5F6C6 /* SessionManager.swift in Sources */,
 				ECFCF01022D728A800CF9154 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
