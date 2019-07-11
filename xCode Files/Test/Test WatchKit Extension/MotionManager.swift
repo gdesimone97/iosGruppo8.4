@@ -24,6 +24,11 @@ class MotionManager {
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
     
+    var buffer_yaw = RunningBuffer(size: 50)
+    var buffer_pitch = RunningBuffer(size: 50)
+    
+    var flag: Bool = false
+    
     
     // MARK: Application Specific Constants
     
@@ -63,8 +68,17 @@ class MotionManager {
                 print("Encountered error: \(error!)")
             }
             
-            if deviceMotion != nil {
-                self.processDeviceMotion(deviceMotion!)
+            if let data = deviceMotion?.rotationRate {
+                let x = data.x
+                let z = data.z
+                
+                if(!self.flag && x > 1 && z < -1) {
+                    self.flag = true
+                }
+                
+                if self.flag && deviceMotion != nil {
+                    self.processDeviceMotion(deviceMotion!)
+                }
             }
         }
     }
@@ -82,13 +96,32 @@ class MotionManager {
         
         let yaw = rotationRate.z
         let pitch = rotationRate.x
-        let sum = -rotationRate.x + rotationRate.z
-        
-//        delegate!.updatedRead(pitch: pitch, yaw: yaw, sum: sum)
+//        let sum = -rotationRate.x + rotationRate.z
         
         
-        print("yaw: " + String(format: "%.3f", yaw) + " - pitch: " + String(format: "%.3f", pitch) + " - sum: " + String(format: "%.3f", sum))
+        buffer_yaw.addSample(yaw)
+        buffer_pitch.addSample(pitch)
+        
+        if !buffer_yaw.isFull() {
+            return
+        }
+        flag = false
+        
+        let yawMin = buffer_yaw.min()
+        let yawMax = buffer_yaw.max()
+        let yawAvg = buffer_yaw.sum()/50
+        let pitchMin = buffer_pitch.min()
+        let pitchMax = buffer_pitch.max()
+        let pitchAvg = buffer_pitch.sum()/50
+        
+        buffer_yaw.reset()
+        buffer_pitch.reset()
+        
+        delegate!.updatedRead(pitch: pitch, yaw: yaw, sum: sum)
+        
+//        print("yawMin: " + String(format: "%.3f", yawMin) + " yawMax: " + String(format: "%.3f", yawMax) + " yawAvg: " + String(format: "%.3f", yawAvg) + " - pitchMin: " + String(format: "%.3f", pitchMin) + " pitchMax: " + String(format: "%.3f", pitchMax) + " pitchAvg: " + String(format: "%.3f", pitchAvg))
        
+        
     }
     
 }
