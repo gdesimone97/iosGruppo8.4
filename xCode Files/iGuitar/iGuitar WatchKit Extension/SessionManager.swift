@@ -11,11 +11,16 @@ import WatchConnectivity
 
 class SessionManager: NSObject,WCSessionDelegate {
     let session = WCSession.default
-    var sessionStatus: WCSessionActivationState?
+    var sessionStatus: WCSessionActivationState {
+        get {
+            return session.activationState
+        }
+    }
     var connectionStatus: Bool = false
     var action = false
+    static var share = SessionManager()
     
-    override init() {
+    private override init() {
         super.init()
         if WCSession.isSupported() {
             print("Watch - Conessione supportata")
@@ -26,7 +31,6 @@ class SessionManager: NSObject,WCSessionDelegate {
             print("Watch - Connessione non supportata")
         }
         sleep(2)
-        sessionStatus = session.activationState
         connectionStatus = checkConnection()
     }
     
@@ -66,4 +70,7 @@ class SessionManager: NSObject,WCSessionDelegate {
         }
     }
     
+     class func reconnect(){
+        self.share = SessionManager()
+    }
 }

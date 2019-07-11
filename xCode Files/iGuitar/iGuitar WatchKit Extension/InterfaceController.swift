@@ -12,11 +12,8 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    private var session: SessionManager?
-    
-    
     @IBOutlet weak var stateLabel: WKInterfaceLabel!
-    
+    let session = SessionManager.share
     // Stato della connessione, se true può inviare messaggi
     var action = false // Azione dell' utente
     
@@ -30,8 +27,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        session = SessionManager()
-        if (session?.checkConnection())! {
+            if (session.checkConnection()) {
             stateLabel.setText("Connected")
             stateLabel.setTextColor(UIColor.green)
         }
@@ -42,7 +38,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func button() {
-        session?.sendMessage(["action": action])
+        session.sendMessage(["action": action])
     }
     
     override func didDeactivate() {
@@ -51,7 +47,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func Connection() {
-        session = SessionManager()
+        SessionManager.reconnect()
     }
     
     
