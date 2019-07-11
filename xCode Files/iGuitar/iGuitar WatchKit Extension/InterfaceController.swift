@@ -12,6 +12,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
+    @IBOutlet weak var stateLebel: WKInterfaceLabel!
     let session = WCSession.default
     var sessionStatus: WCSessionActivationState?
     var connectionStatus: Bool = false // Stato della connessione, se true può inviare messaggi
@@ -56,7 +57,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         if true {
             print("Messaggio inviato")
-            session.sendMessage(["action": "action"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["action": action], replyHandler: nil, errorHandler: nil)
         }
         else {
             print("Messaggio non inviato")
@@ -73,6 +74,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        stateLebel.setText("")
         if WCSession.isSupported() {
             print("Watch - Conessione supportata")
             session.delegate = self
@@ -83,6 +85,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         sleep(2)
         sessionStatus = session.activationState
+        if sessionStatus == WCSessionActivationState.activated {
+             stateLebel.setText("Connected")
+             stateLebel.setTextColor(UIColor.green)
+        }
+        else {
+            stateLebel.setText("Not connected")
+            stateLebel.setTextColor(UIColor.red)
+        }
         connectionStatus = checkConnection(sessionStatus!, session)
     }
     
@@ -106,5 +116,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Watch - Connessione non supportata")
         }
     }
+    
     
 }
