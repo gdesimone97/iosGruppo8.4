@@ -15,6 +15,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     let session = WCSession.default
     var sessionStatus = WCSessionActivationState.notActivated // Stato della sessione
     var messageReceived: String?
+    var count: Int = 0
     
     override func viewDidLoad() {
         session.delegate = self
@@ -22,6 +23,8 @@ class ViewController: UIViewController, WCSessionDelegate {
         sessionStatus = session.activationState
         label.text = "start"
     }
+    
+    
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("Sessione Conclusa")
@@ -38,11 +41,16 @@ class ViewController: UIViewController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("Messaggio rivecuto")
         messageReceived = message["action"] as! String
+        self.count+=1
         DispatchQueue.main.async {
-            self.label.text = self.messageReceived
+            self.label.text = self.messageReceived! + " " + String(self.count)
         }
     }
     
+    @IBAction func reset(_ sender: Any) {
+        self.label.text = "start"
+        count = 0
+    }
     
 }
 
