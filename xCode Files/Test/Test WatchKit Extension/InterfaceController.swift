@@ -15,9 +15,10 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
     var manager: MotionManager!
     
     func updatedRead(pitch: Double, yaw: Double, sum: Double) {
-        <#code#>
+        
     }
     
+    @IBOutlet weak var label1: WKInterfaceLabel!
     
    
     @IBAction func stopButton() {
@@ -25,6 +26,7 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
     }
     @IBAction func startButton() {
         manager.startUpdates()
+//        label1.setText("Trying to connect...")
     }
     
 //    @IBOutlet weak var label1: WKInterfaceLabel!
@@ -43,20 +45,20 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
      manager = MotionManager()
     }
     
-    /*
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
+    /*func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
         switch activationState {
         case WCSessionActivationState.activated:
             DispatchQueue.main.async {
-                self.label1.setText("session activated")
+                self.label1.setText("Session activated!")
+                
             }
         case WCSessionActivationState.notActivated:
             DispatchQueue.main.async {
-                self.label1.setText("session not activated")
+                self.label1.setText("Session not activated!")
             }
         default:
             DispatchQueue.main.async {
-                self.label1.setText("unknown session state")
+                self.label1.setText("Unknown session state!")
             }
         }
     }
@@ -65,8 +67,7 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
         DispatchQueue.main.async {
             self.label1.setText((message["payload"] as! String))
         }
-    }
-     */
+    }*/
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -78,14 +79,13 @@ class InterfaceController: WKInterfaceController, MotionManagerDelegate{
         super.didDeactivate()
     }
 
-    /*
-    @IBAction func sendButton() {
+    
+    @IBAction func sendData() {
         if session.activationState == WCSessionActivationState.activated{
-            session.sendMessage(["payload": "ciao Francesco"], replyHandler: nil, errorHandler: nil)
+            session.sendMessage(["payload": "1"], replyHandler: nil, errorHandler: nil)
         }
         else{
-            label1.setText("unable to send message")
+            print("unable to send message")
         }
     }
-     */
 }
