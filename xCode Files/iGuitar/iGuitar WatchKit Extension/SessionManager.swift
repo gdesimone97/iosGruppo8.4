@@ -41,6 +41,7 @@ class SessionManager: NSObject,WCSessionDelegate {
     
     
     func checkConnection() -> Bool{
+        
         guard self.sessionStatus == WCSessionActivationState.activated else {
             print("Watch - Connessione non disponibile")
             return false
