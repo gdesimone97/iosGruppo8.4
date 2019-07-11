@@ -19,16 +19,7 @@
                                 <action selector="button" destination="AgC-eL-Hgc" id="yfn-oX-IGD"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Connect" id="mRE-BN-den">
-                            <connections>
-                                <action selector="Connection" destination="AgC-eL-Hgc" id="aaT-nf-Eyg"/>
-                            </connections>
-                        </button>
-                        <label width="136" alignment="left" text="Label" id="IiN-dK-B3O"/>
                     </items>
-                    <connections>
-                        <outlet property="stateLabel" destination="IiN-dK-B3O" id="81R-hw-F6K"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
