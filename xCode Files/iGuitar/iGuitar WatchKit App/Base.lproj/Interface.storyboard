@@ -19,6 +19,11 @@
                                 <action selector="button" destination="AgC-eL-Hgc" id="yfn-oX-IGD"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Connetti" id="mRE-BN-den">
+                            <connections>
+                                <action selector="Connection" destination="AgC-eL-Hgc" id="aaT-nf-Eyg"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

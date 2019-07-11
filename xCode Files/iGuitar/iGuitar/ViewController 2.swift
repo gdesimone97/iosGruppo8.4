@@ -12,27 +12,27 @@ import WatchConnectivity
 class ViewController: UIViewController, WCSessionDelegate {
     
     @IBOutlet weak var label: UILabel!
-    var session = WCSession.default
-    var sessionStatus: WCSessionActivationState? // Stato della sessione
+    var session: WCSession?
+    var sessionStatus = WCSessionActivationState.notActivated // Stato della sessione
     var messageReceived: String?
     var count: Int = 0
     
+
+    
     override func viewDidLoad() {
-        session.delegate = self
-        session.activate()
-        sessionStatus = session.activationState
+//        session.delegate = self
+//        session.activate()
+//        sessionStatus = session.activationState
         label.text = "start"
+        session = Session.retriveSession()
+        session!.delegate = self
+        sessionStatus = session!.activationState
+        print(sessionStatus == WCSessionActivationState.activated)
     }
     
     
-    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        if(activationState == WCSessionActivationState.activated){
-            print("Sessione Attivata")
-        }
-        else {
-            print("Sessione non attiva")
-        }
+        print("Sessione Conclusa")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -53,7 +53,9 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func reset(_ sender: Any) {
+        self.label.text = "start"
         count = 0
     }
+    
 }
 

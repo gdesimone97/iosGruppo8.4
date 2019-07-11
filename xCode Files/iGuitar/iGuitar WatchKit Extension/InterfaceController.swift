@@ -13,16 +13,21 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     let session = WCSession.default
-    var sessionStatus = WCSessionActivationState.notActivated
+    var sessionStatus: WCSessionActivationState?
     var connectionStatus: Bool = false // Stato della connessione, se true può inviare messaggi
     var action = false // Azione dell' utente
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("Watch - Connessione conclusa con successo")
+        if (activationState == WCSessionActivationState.activated){
+            print("Watch - Connessione attivata con successo")
+        }
+        else {
+            print("Watch - Connessione conclusa con successo")
+        }
     }
     
     
-    func ckeckConnection(_ sessionStatus: WCSessionActivationState,_ session: WCSession) -> Bool{
+    func checkConnection(_ sessionStatus: WCSessionActivationState,_ session: WCSession) -> Bool{
         
         var stateConnection = false // Controlla se la connessione è disponibile
         var reachable = false // Controlla che l'iphone sia sbloccato
@@ -48,7 +53,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func sendMessage(){
-        if connectionStatus {
+        
+        if true {
             print("Messaggio inviato")
             session.sendMessage(["action": "action"], replyHandler: nil, errorHandler: nil)
         }
@@ -71,15 +77,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("Watch - Conessione supportata")
             session.delegate = self
             session.activate()
-            sessionStatus = session.activationState
-            print("Status: ",sessionStatus)
         }
         else {
             print("Watch - Connessione non supportata")
         }
-        
-        connectionStatus = ckeckConnection(sessionStatus, session)
-        
+        sleep(2)
+        sessionStatus = session.activationState
+        connectionStatus = checkConnection(sessionStatus!, session)
     }
     
     @IBAction func button() {
@@ -88,6 +92,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    
+    @IBAction func Connection() {
+        if WCSession.isSupported() {
+            session.delegate = self
+            session.activate()
+            sessionStatus = session.activationState
+            print("Status: ",sessionStatus! == WCSessionActivationState.activated)
+        }
+        else {
+            print("Watch - Connessione non supportata")
+        }
     }
     
 }
