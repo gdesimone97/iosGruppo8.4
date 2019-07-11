@@ -30,27 +30,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func checkConnection(_ sessionStatus: WCSessionActivationState,_ session: WCSession) -> Bool{
         
-        var stateConnection = false // Controlla se la connessione è disponibile
-        var reachable = false // Controlla che l'iphone sia sbloccato
-        
-        if sessionStatus == WCSessionActivationState.activated{
-            print("Watch - Connessione disponibile")
-            stateConnection = true
-        }
-        else {
+        guard sessionStatus == WCSessionActivationState.activated else {
             print("Watch - Connessione non disponibile")
+            return false
         }
         
-        if stateConnection && session.isReachable {
-            reachable = true
-        }
-            
-        else {
-            if stateConnection && session.iOSDeviceNeedsUnlockAfterRebootForReachability {
+        guard session.isReachable else {
+            if  session.iOSDeviceNeedsUnlockAfterRebootForReachability {
                 print("Sblocca iphone")
             }
+            return false
         }
-        return reachable && stateConnection
+        return true
     }
     
     func sendMessage(){
@@ -85,7 +76,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         sleep(2)
         sessionStatus = session.activationState
-        if sessionStatus == WCSessionActivationState.activated {
+        connectionStatus = checkConnection(sessionStatus!, session)
+        if connectionStatus {
              stateLebel.setText("Connected")
              stateLebel.setTextColor(UIColor.green)
         }
@@ -93,7 +85,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             stateLebel.setText("Not connected")
             stateLebel.setTextColor(UIColor.red)
         }
-        connectionStatus = checkConnection(sessionStatus!, session)
+        
     }
     
     @IBAction func button() {
