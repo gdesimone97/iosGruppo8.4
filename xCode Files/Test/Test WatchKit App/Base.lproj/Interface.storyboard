@@ -14,20 +14,20 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Test_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Start" id="kdI-og-DZT">
+                        <button width="1" alignment="left" title="Start" id="kdI-og-DZT">
                             <connections>
                                 <action selector="startButton" destination="AgC-eL-Hgc" id="DmC-Aq-y0V"/>
                             </connections>
                         </button>
-                        <button width="1" height="40" alignment="center" verticalAlignment="center" title="Stop" id="zF6-nm-gwy">
+                        <button width="1" alignment="left" title="Stop" id="QfZ-58-fq8">
                             <connections>
-                                <action selector="stopButton" destination="AgC-eL-Hgc" id="Rcp-p6-JW0"/>
+                                <action selector="stopButton" destination="AgC-eL-Hgc" id="Dl2-Ju-TNF"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-87" y="-52"/>
+            <point key="canvasLocation" x="219.95061728395061" y="344.74619289340097"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -44,49 +44,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="238" y="108"/>
+            <point key="canvasLocation" x="220" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Test_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="536" y="246"/>
+            <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Test_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="536" y="-52"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="hem-tB-42f">
-            <objects>
-                <controller id="a0G-nf-w7Q" customClass="InterfaceController" customModule="Test_WatchKit_Extension">
-                    <items>
-                        <separator alignment="left" id="j5Y-AL-PGj"/>
-                        <label alignment="left" text="Starting the game" id="X9z-j4-Jqb"/>
-                        <separator alignment="left" id="pnm-UF-87S"/>
-                        <group width="1" height="67" alignment="center" verticalAlignment="center" id="zpw-WA-WO0">
-                            <items>
-                                <label width="136" height="25" alignment="center" verticalAlignment="center" id="lst-4U-0TR"/>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="label1" destination="lst-4U-0TR" id="7hp-9L-S5w"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-87" y="303"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="jg2-DM-pOE">
-            <objects>
-                <controller id="qRE-EQ-Tnh"/>
-            </objects>
-            <point key="canvasLocation" x="-87.308641975308646" y="665.76142131979691"/>
+            <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
 </document>
