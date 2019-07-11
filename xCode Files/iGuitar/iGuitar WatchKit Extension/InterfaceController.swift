@@ -72,6 +72,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activate()
             sessionStatus = session.activationState
+            print("Status: ",sessionStatus)
         }
         else {
             print("Watch - Connessione non supportata")
