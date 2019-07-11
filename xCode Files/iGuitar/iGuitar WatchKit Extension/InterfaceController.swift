@@ -27,6 +27,11 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
     
+    
+    @IBAction func prova() {
+         presentController(withName: "page1", context: nil)
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
